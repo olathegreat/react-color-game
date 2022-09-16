@@ -135,4 +135,7 @@ a{
     .row{
         width: 100vw;
     }
+    h1{
+        font-size: 16px;
+    }
 }

@@ -80,7 +80,11 @@ const nextBtnClick = () =>{
     setColorGenerated5("rgb" + "(" + (Math.floor(Math.random()*255)) + "," + (Math.floor(Math.random()*255)) + "," + (Math.floor(Math.random()*255)) + ")");
   setChecker(false);
   setRandomIndex(Math.floor(Math.random()* colorArraySix.length));
-  setLevel(level + 1);
+  if(level<10){
+    setLevel(level + 1);
+  }
+ 
+  
   setResultComment("");
   setScoreAnimation(!scoreAnimation);
 }
@@ -130,7 +134,7 @@ const nextBtnClick = () =>{
         
        +10
         </div>
-        {  level > 10 && (
+        {  level === 10 && (
           <div div className='finalmodal'>
             <div>Your color guessing strength is</div>
             <div className='scoreStrength'>{((level/trialNumber)*100).toFixed(1) + "%"}</div>
